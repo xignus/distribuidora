@@ -1,5 +1,5 @@
-App de gestion para guillote
-============================
+App de gestion para Perez & Perez
+=================================
 
 Sistema de gestion interna y externa para una distribuidora poli rubro.
 
