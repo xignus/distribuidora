@@ -1,0 +1,3 @@
+.web2py-menu-active {
+    background-color: #89c236;
+}

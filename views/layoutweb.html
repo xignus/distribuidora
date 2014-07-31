@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- start: Meta -->
+    <meta charset="utf-8">
+    <title>{{=response.title or ''}}</title> 
+    <meta name="description" content="FreeME:Bootstrap Theme"/>
+    <meta name="keywords" content="Template, Theme, web, html5, css3" />
+    <meta name="author" content="Łukasz Holeczek from creativeLabs"/>
+    <!-- end: Meta -->
+    
+    <!-- start: Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- end: Mobile Specific -->
+    
+    <!-- start: Facebook Open Graph -->
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:image" content=""/>
+    <!-- end: Facebook Open Graph -->
+    <link rel="shortcut icon" href="{{=URL('static','images/favicon.ico')}}" />
+    
+    <!-- start: CSS -->
+    <link href="{{=URL('static','css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{=URL('static','css/bootstrap-responsive.css')}}" rel="stylesheet">
+    <link href="{{=URL('static','custom/css/style.css')}}" rel="stylesheet">
+    <link href="{{=URL('static','custom/css/xignus.css')}}" rel="stylesheet">
+    <link href="{{=URL('static','css/web2py-bootstrap.css')}}" rel="stylesheet">
+    <link href="{{=URL('static','css/web2py.css')}}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+    <!-- end: CSS -->
+    <script src="{{=URL('static','js/jquery.js')}}"></script>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+  </head>
+  <body>
+    
+    <!--start: Wrapper -->
+    <div id="wrapper">
+      <!--start: Container -->
+      <div class="container">
+	<!--start: Header -->
+	<header>
+	  <!--start: Row -->
+	  <div class="row">
+	    <!--start: Logo -->
+	    <div class="logo span4">
+	      {{=response.logo or ''}}  {{=response.subtitle}}
+	    </div>
+	    <!--end: Logo -->
+	    
+	    <!--start: Social Links -->
+	    <div class="span8">
+	      <div id="social-links">
+		<ul class="social-small-grid">
+		  <li>
+		    <div class="social-small-item">				
+		      <div class="social-small-info-wrap">
+			<div class="social-small-info">
+			  <div class="social-small-info-front social-small-facebook">
+			    <a href="http://facebook.com"></a>
+			  </div>
+			  <div class="social-small-info-back social-small-facebook-hover">
+			    <a href="http://facebook.com"></a>
+			  </div>	
+			</div>
+		      </div>
+		    </div>
+		  </li>
+		</ul>
+	      </div>
+	    </div>
+	    <!--end: Social Links -->
+	    
+	  </div>
+	  <!--end: Row -->
+	  
+	</header>
+	<!--end: Header-->
+	
+	<!--start: Navigation-->	
+	<div class="navbar navbar-inverse">
+    	  <div class="navbar-inner">
+            <div class="container pull-right">
+	      {{is_mobile=request.user_agent().is_mobile}}
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+              </a>
+	      <div class="{{='nav-collapse' if is_mobile else 'nav'}}">
+		{{if response.menu:}}
+		{{=MENU(response.menu, _class='mobile-menu navbar' if is_mobile else 'nav',mobile=is_mobile,li_class='dropdown',ul_class='dropdown-menu')}}
+		{{pass}}
+
+		<!-- MODAL FOR CONTACT -->
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="myModalLabel">Contactanos</h4>
+		      </div>
+		      <div class="modal-body">
+			<div class="row centered">
+			  <div>
+			    <p>idsd</p>
+			  </div>
+			  <div class="col-md-12"><p> info@xignus.com.ar o al +54 351 6485781</p></div>
+			</div>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+              </div>
+            </div>
+      	  </div>
+    	</div>
+	<!--end: Navigation-->
+	
+      </div>
+      <!--start: Container -->
+      <div class="container">
+	{{include}}
+      </div>
+      <!--start: Container -->
+      <div class="container">		
+      	<!-- start: Footer Menu -->
+	<div id="footer-menu" class="hidden-tablet hidden-phone">
+	  <!-- start: Container -->
+	  <div class="container">
+	    <!-- start: Row -->
+	    <div class="row">
+	      <!-- start: Footer Menu Logo -->
+	      <div class="span1">
+		<div id="footer-menu-logo">
+		  {{=response.logo}}
+		</div>
+	      </div>
+	      <!-- end: Footer Menu Logo -->
+
+	      <!-- start: Footer Menu Links-->
+	      <div class="span10">
+		
+		<div id="footer-menu-links">
+		  <ul id="footer-nav">
+		    <li><a href="index.html">Inicio</a></li>
+		    <li><a href="about.html">Empresa</a></li>
+		    <li><a href="services.html">Productos</a></li>
+		    <li><a href="pricing.html">Servicios</a></li>
+		    <li><a href="contact.html">Contacto</a></li>
+		  </ul>
+		</div>
+	      </div>
+	      <!-- end: Footer Menu Links-->
+
+	      <!-- start: Footer Menu Back To Top -->
+	      <div class="span1">
+		<div id="footer-menu-back-to-top">
+		  <a href="#"></a>
+		</div>
+	      </div>
+	      <!-- end: Footer Menu Back To Top -->
+	    </div>
+	    <!-- end: Row -->
+	  </div>
+	  <!-- end: Container  -->	
+	</div>	
+	<!-- end: Footer Menu -->
+
+	<!-- start: Footer -->
+	<div id="footer">
+	  <!-- start: Container -->
+	  <div class="container">
+	    <!-- start: Row -->
+	    <div class="row">
+	      <!-- start: About -->
+	      <div class="span3">
+		<h3>Sobre nosotros</h3>
+		<p>
+		  Perez & Perez Distribuciones, es una empresa familiar creada en el norte de Argentina, cuyo objetivo es proveer a nuestros clientes productos alimenticios de primera calidad, basados en la calidad y trayectoria de dos de los mas grandes productores de conservas de nuestro país, Alco y Canale. 
+		</p>
+	      </div>
+	      <!-- end: About -->
+
+	      <!-- start: Photo Stream -->
+	      <div class="span3">
+		<h3>Nuestros productos</h3>
+		<div class="flickr-widget">
+		  <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&display=latest&size=s&layout=x&source=user&user=29609591@N08"></script>
+		  <div class="clear"></div>
+		</div>
+		
+	      </div>
+	      <!-- end: Photo Stream -->
+	      
+	      <div class="span6">
+		
+		<!-- start: Follow Us -->
+		<h3>Siguenos!</h3>
+		<ul class="social-grid">
+		  <li>
+		    <div class="social-item">				
+		      <div class="social-info-wrap">
+			<div class="social-info">
+			  <div class="social-info-front social-facebook">
+			    <a href="http://facebook.com"></a>
+			  </div>
+			  <div class="social-info-back social-facebook-hover">
+			    <a href="http://facebook.com"></a>
+			  </div>
+			</div>
+		      </div>
+		    </div>
+		  </li>
+		</ul>
+		<!-- end: Follow Us -->
+		
+		<!-- start: Newsletter -->
+		<form id="newsletter">
+		  <h3>Novedades</h3>
+		  <p>Por favor dejanos tu dirección de email si deseas tener novedades</p>
+		  <label for="newsletter_input">@:</label>
+		  <input type="text" id="newsletter_input"/>
+		  <input type="submit" id="newsletter_submit" value="submit">
+		</form>
+		<!-- end: Newsletter -->
+		
+	      </div>
+	      
+	    </div>
+	    <!-- end: Row -->	
+	    
+	  </div>
+	  <!-- end: Container  -->
+
+	</div>
+	<!-- end: Footer -->
+	
+      </div>
+      <!-- end: Container  -->
+
+    </div>
+    <!-- end: Wrapper  -->
+
+
+    <!-- start: Copyright -->
+    <div id="copyright">
+      
+      <!-- start: Container -->
+      <div class="container">
+	
+	<p>
+	  &copy; 2013, creativeLabs. <a href="http://bootstrapmaster.com" alt="Bootstrap Themes">Bootstrap Themes</a> Designed by BootstrapMaster in Poland <img src="/distribuidora/static/custom/img/poland.png" alt="Poland" style="margin-top:-4px">
+	</p>
+	
+      </div>
+      <!-- end: Container  -->
+      
+    </div>	
+    <!-- end: Copyright -->
+
+    <!-- start: Java Script -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{=URL('static','js/bootstrap.js')}}"></script>
+    <script src="{{=URL('static','js/web2py.js')}}"></script>
+    <script src="{{=URL('static','js/web2py_bootstrap.js')}}"></script>
+    <script src="{{=URL('static','custom/js/flexslider.js')}}"></script>
+    <script src="{{=URL('static','custom/js/carousel.js')}}"></script>
+    <script def src="{{=URL('static','custom/js/custom.js')}}"></script>
+    <!-- end: Java Script -->
+
+  </body>
+</html>
