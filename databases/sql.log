@@ -59,3 +59,19 @@ CREATE TABLE test(
     myfield TEXT
 );
 success!
+timestamp: 2014-08-01T02:41:50.646004
+CREATE TABLE portada(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo CHAR(512),
+    descripcion TEXT,
+    imagen CHAR(512),
+    fecha DATE
+);
+success!
+timestamp: 2014-08-01T02:41:50.853089
+CREATE TABLE empresa(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo CHAR(512),
+    info TEXT
+);
+success!

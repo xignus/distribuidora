@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+
+db.define_table('portada',
+                Field('titulo','string'),
+                Field('descripcion','text'),
+                Field('imagen','upload')
+)
+
+db.define_table('empresa',
+                Field('titulo'),
+                Field('info', 'text')
+)
+

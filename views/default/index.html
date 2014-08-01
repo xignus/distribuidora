@@ -7,44 +7,20 @@
   <div class="flexslider">
     <ul class="slides">
 
+      {{for imagen in portada:}}
       <li>
-	<img src="/distribuidora/static/custom/img/slider/slider1.jpg" alt="" />
-	<div class="slide-caption n hidden-phone">
-	  <h3>This is a caption</h3>
-	  <p>
-	    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-	  </p>
-	</div>
-      </li>
-
-      <li>
-	<img src="/distribuidora/static/custom/img/slider/slider2.jpg" alt="" />
+	<img src="{{=URL('download',args=imagen.imagen)}}" alt="" />
 	<div class="slide-caption hidden-phone">
-	  <h3>This is a caption</h3>
-	  <p>
-	    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-	  </p>
+	  <h3>{{=imagen.titulo}}</h3>
+	  <p>{{=imagen.descripcion}}</p>
 	</div>
-      </li>
-
-      <li>
-	<img src="/distribuidora/static/custom/img/slider/slider3.jpg" alt="" />
-      </li>
-
+      </li>	
+      {{pass}}
     </ul>
   </div>
 
 </div>
 <!-- end: Flexslider -->
-
-<!-- start: Hero Unit - Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit">
-  <p>
-    This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-  </p>
-  <p><a class="btn btn-success btn-large">Learn more &raquo;</a></p>
-</div>
-<!-- end: Hero Unit -->
 
 <!-- start: Row -->
 <div class="row">

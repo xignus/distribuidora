@@ -7,7 +7,7 @@
 
 response.logo = A(IMG(_src=URL('static','images/logosolo.png'), _alt="P&P distribuciones", _width=""), _href=URL('default','index'), _class="brand")
 response.title = "P & P Distribuciones"
-response.subtitle = H4("Distribuciones en Salta y Jujuy", _class="span4")
+response.subtitle = H4("Distribuciones Salta - Jujuy", _class="span4")
 
 ## read more at http://dev.w3.org/html5/markup/meta.name.html
 response.meta.author = 'Your Name <you@example.com>'
