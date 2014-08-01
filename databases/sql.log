@@ -75,3 +75,6 @@ CREATE TABLE empresa(
     info TEXT
 );
 success!
+timestamp: 2014-08-01T09:31:11.125307
+ALTER TABLE auth_user ADD username CHAR(128);
+success!
