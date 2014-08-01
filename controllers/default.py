@@ -14,6 +14,15 @@ def index():
     portada=db(db.portada.id>0).select()
     return dict(portada=portada)
 
+def empresa():
+    return dict()
+
+def productos():
+    return dict()
+
+def servicios():
+    return dict()
+
 def user():
     """
     exposes:

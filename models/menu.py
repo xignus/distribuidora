@@ -28,9 +28,9 @@ else:
 
 response.menu = [
     (T('Inicio'), ((request.controller=='default')&(request.function=='index')), URL('default', 'index'), []),
-    (T('Empresa'), ((request.controller=='default')&(request.function=='servicios')), URL('default', 'servicios'), []),
-    (T('Productos'), ((request.controller=='default')&(request.function=='about')), URL('default', 'about'), []),
-    (T('Servicios'), (request.controller=='blog'), URL('blog', 'index'), []),
+    (T('Empresa'), ((request.controller=='default')&(request.function=='empresa')), URL('default', 'empresa'), []),
+    (T('Productos'), ((request.controller=='default')&(request.function=='productos')), URL('default', 'productos'), []),
+    (T('Servicios'), ((request.controller=='default')&(request.function=='servicios')), URL('default', 'servicios'), []),
     (A(I(_class='icon icon-envelope icon-white'), False, "#myModal", _class="contact")),
     last_option
 ]

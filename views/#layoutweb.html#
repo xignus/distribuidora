@@ -5,9 +5,9 @@
     <!-- start: Meta -->
     <meta charset="utf-8">
     <title>{{=response.title or ''}}</title> 
-    <meta name="description" content="FreeME:Bootstrap Theme"/>
-    <meta name="keywords" content="Template, Theme, web, html5, css3" />
-    <meta name="author" content="Łukasz Holeczek from creativeLabs"/>
+    <meta name="description" content="Perez & Perez distribuciones"/>
+    <meta name="keywords" content="alco, canale, conservas" />
+    <meta name="author" content="Xignus - Argentina"/>
     <!-- end: Meta -->
     
     <!-- start: Mobile Specific -->
@@ -190,6 +190,7 @@
 		<h3>Sobre nosotros</h3>
 		<p>
 		  Perez & Perez Distribuciones, es una empresa familiar creada en el norte de Argentina, cuyo objetivo es proveer a nuestros clientes productos alimenticios de primera calidad, basados en la calidad y trayectoria de dos de los mas grandes productores de conservas de nuestro país, Alco y Canale. 
+		</p>
 	      </div>
 	      <!-- end: About -->
 
