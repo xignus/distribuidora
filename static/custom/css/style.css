@@ -23,7 +23,8 @@
 }
 
 body {
-	background: url(../img/bg-repeat.jpg);
+	background: url(../../img/body.png);
+	background-repeat: no-repeat;
 	font-family: 'Droid Sans';
 	font-size: 12px;
 	color: #666;
