@@ -1,0 +1,45 @@
+body{
+    margin:30px;
+}
+
+.navbar {
+    align:center;
+    border-radius: 20px 20px 20px 20px;
+    background-color:#7c9cbc;
+    font-style:normal;
+    font-size:1em;
+    padding-bottom:5px;
+    margin-left:10px;
+    margin-top:30px;
+}
+
+.nav a {
+    color:white;
+}
+
+.nav a:hover{
+    color:black;
+    background-color:aqua;
+    border-radius: 20px 20px 20px 20px;
+    font-size:medium;
+}
+
+.nav li.active{
+    background-color:#ccccff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.nav li{
+    margin-right:10px;
+    margin-top:5px;
+    background-color:cyan;
+    border-radius: 20px 20px 20px 20px;
+}
+.nav li.active a {
+    color:#cc0099;
+}
+
+.logo {
+    height:100px;
+    border-radius:50px 50px 50px 50px;
+}

@@ -1,0 +1,17 @@
+.box{
+    border: 1px solid blue;
+    border-radius:20px;
+    display:inline-block;
+    padding:10px;
+    float:left;x
+}
+
+p {
+    display:inline;
+}
+
+h1 {
+    margin:0px;
+    overflow:hidden;
+    
+}

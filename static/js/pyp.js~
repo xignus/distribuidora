@@ -1,0 +1,6 @@
+var limparform = function (){
+    $('#contacto_nombre__label').hide();
+    $('#contacto_email__label').hide();
+    $('#contacto_mensaje__label').hide();
+    
+};

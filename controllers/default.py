@@ -11,17 +11,9 @@
 
 
 def index():
-    portada=db(db.portada.id>0).select()
-    return dict(portada=portada)
+    imagenes=db(db.slideshow.id>0).select()
+    return dict(imagenes=imagenes)
 
-def empresa():
-    return dict()
-
-def productos():
-    return dict()
-
-def servicios():
-    return dict()
 
 def user():
     """

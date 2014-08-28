@@ -59,22 +59,20 @@ CREATE TABLE test(
     myfield TEXT
 );
 success!
-timestamp: 2014-08-01T02:41:50.646004
-CREATE TABLE portada(
+timestamp: 2014-08-27T10:33:10.605926
+CREATE TABLE contacto(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre CHAR(512),
+    email CHAR(512),
+    mensaje TEXT
+);
+success!
+timestamp: 2014-08-28T00:50:12.918600
+CREATE TABLE slideshow(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     titulo CHAR(512),
-    descripcion TEXT,
     imagen CHAR(512),
-    fecha DATE
+    descripcion CHAR(512)
 );
 success!
-timestamp: 2014-08-01T02:41:50.853089
-CREATE TABLE empresa(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    titulo CHAR(512),
-    info TEXT
-);
-success!
-timestamp: 2014-08-01T09:31:11.125307
-ALTER TABLE auth_user ADD username CHAR(128);
 success!

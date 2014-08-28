@@ -1,7 +1,0 @@
-.web2py-menu-active {
-    background-color: #89c236;
-}
-
-body {
-    background-image:url({{=URL('static','images/body.png')}});
-}

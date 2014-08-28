@@ -1,0 +1,48 @@
+body{
+    background-image:url('../img/fondo-verde.jpg');
+    
+}
+.navbar {
+    background-color:#A52A2A;
+}
+
+.nav {
+    margin-right:20px;
+}
+
+.logo {
+    margin-left:20px;
+}
+
+.nav li a{
+    color:white;
+    font-weight:bold;
+}
+
+.nav li a:hover{
+    background-color:#D2691E;
+}
+
+.nav li.active {
+    background-color:#D2691E;
+}
+
+
+.pie {
+    background-color:#380000;
+    color:white;
+    margin-bottom:0px;
+}
+
+.carousel-inner > .item > img { margin: 0 auto; }
+
+.row {
+    margin-top:20px;
+}
+.box{
+    border:solid #f0f0f0 3px;
+    margin-left:0px;
+    margin-right:0px;
+    border-radius:10px 10px 10px 10px;
+    background:rgba(240,240,240,.5);
+}
