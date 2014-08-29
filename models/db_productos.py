@@ -1,0 +1,12 @@
+#-*- coding: utf-8 -*-
+
+db.define_table('categorias',
+                Field('nombre')
+)
+
+db.define_table('productos',
+                Field('nombre'),
+                Field('presentacion'),
+                Field('categoria', db.categorias),
+                Field('imagen','upload')
+)

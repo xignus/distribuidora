@@ -1,14 +1,14 @@
-id,nombre, presentacion,categoria
-1,Mermelada de Ciruela , Regular 454g / Light 390g,1
-2,Mermelada de Damasco , Regular 454g / Light 390g,1
-3,Mermelada de Durazno , Regular 454g / Light 390g,1
-4,Mermelada de Frutilla , Regular 454g / Light 390g,1
-5,Mermelada de Naranja , Regular 454g / Light 390g,1
-6,Coctel 4 frutas , Regular 820g / Light 800g,2
-7,Coctel 5 frutas , Regular 820g / Light 800g,2
-8,Duraznos amarillos , Regular 820g / Light 800g,2
-9,Ensalada de Frutas , Regular 820g / Light 800g,2
-10,Peras , Regular 820g / Light 800g,2
+productos.id,productos.nombre, productos.presentacion,productos.categoria
+1,Mermelada de Ciruela , Regular 454g y Light 390g,1
+2,Mermelada de Damasco , Regular 454g y Light 390g,1
+3,Mermelada de Durazno , Regular 454g y Light 390g,1
+4,Mermelada de Frutilla , Regular 454g y Light 390g,1
+5,Mermelada de Naranja , Regular 454g y Light 390g,1
+6,Coctel 4 frutas , Regular 820g y Light 800g,2
+7,Coctel 5 frutas , Regular 820g y Light 800g,2
+8,Duraznos amarillos , Regular 820g y Light 800g,2
+9,Ensalada de Frutas , Regular 820g y Light 800g,2
+10,Peras , Regular 820g y Light 800g,2
 11,Salsa Filetto ,  350g,3
 12,Salsa Napolitana ,  350g,3
 13,Salsa Pizza ,  350g,3
@@ -23,13 +23,13 @@ id,nombre, presentacion,categoria
 22,Garbanzos ,  350g,4
 23,Jardinera de verduras ,  350g,4
 24,Porotos ,  350g,4
-25,Pimientos Morrones ,  Regular 160g / Trozos 180g,4
-26,Tomates Perita ,  400g / 3000g,5
+25,Pimientos Morrones ,  Regular 160g y Trozos 180g,4
+26,Tomates Perita ,  400g y 3000g,5
 27,Tomates Perita con Albahaca ,  400g,5
-28,Tomates Cubeteados ,  400g / 3000g,5
+28,Tomates Cubeteados ,  400g y 3000g,5
 29,Tomates Cubeteados con Albahaca ,  400g,5
 30,Salsalco ,  400g,5
 31,Extracto Doble de Tomate ,  145g,5
-32,Puré de Tomates ,  260g / 520g,5
+32,Puré de Tomates ,  260g y 520g,5
 33,Pulpa de Tomate ,  520g,5
 34,Tomates Triturados ,  1kg,5
