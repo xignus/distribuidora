@@ -1,0 +1,17 @@
+#-*- coding: utf-8 -*-
+
+import requests
+import bs4
+
+response = requests.get('http://www.grupocanale.com/listar.php?s=mermeladas-alco&c=23543')
+soup = bs4.BeautifulSoup(response.text)
+
+items = soup.select('.cajaprod')
+datos = {}
+lista = []
+for item in items:
+    datos['articulo']=item.get_text()
+    lista.append(datos)
+
+for elemento in lista:
+    print elemento

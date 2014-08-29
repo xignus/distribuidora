@@ -1,0 +1,5 @@
+http://www.grupocanale.com/listar.php?s=mermeladas-alco&c=23437
+http://www.grupocanale.com/listar.php?s=frutas-alco&c=23436
+http://www.grupocanale.com/listar.php?s=salsas-alco&c=23438
+http://www.grupocanale.com/listar.php?s=vegetales-alco&c=23439
+http://www.grupocanale.com/listar.php?s=tomates-alco&c=23440
