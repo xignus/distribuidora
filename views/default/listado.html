@@ -1,7 +1,7 @@
 {{extend 'layout.html'}}
 
 <div class="box">
-  <h2>Productos disponibles para {{=request.args(0)}}</h2>
+  <h2>Productos marca {{=request.args(0)}}</h2>
   <ul class="submenu">
     {{for categoria in categorias:}}
     <li><a href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></li>
