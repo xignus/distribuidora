@@ -29,7 +29,7 @@ def listado():
     else:
         productos=db((db.productos.marca==request.args(0))&(db.productos.categoria==db.categorias.id)).select()
         
-    categorias=db((db.productos.marca==request.args(0))&(db.productos.categoria==db.categorias.id)).select(groupby=db.productos.categoria)
+    categorias=db((db.productos.marca==request.args(0))&(db.productos.categoria==db.categorias.id)).select(groupby=db.productos.categoria, orderby=db.categorias.nombre)
     return dict(productos=productos, categorias=categorias)
     
 def user():

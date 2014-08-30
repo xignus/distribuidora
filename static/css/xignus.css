@@ -17,16 +17,22 @@ body{
 
 .submenu li{
     display:inline;
-    background-color: black;
+}
+
+.submenu li a{
+    background-color: #a52a2a;
+    color: white;
+    font-weight:bold;
+    text-decoration:none;
     padding:5px;
     border-radius:5px;
 }
 
-.submenu li a{
-    color: white;
-    font-weight:bold;
-    text-decoration:none;
+.submenu li a:hover{
+    background-color:#3366ff;
+    font-size:15px;
 }
+
 .logo {
     width:10%;
     margin:5px 0px 5px 0px;
@@ -89,10 +95,10 @@ footer {
 .box{
     border:solid rgba(240,240,240,.1) 5px;
     border-radius:10px;
-    background:rgba(0,0,0,.5);
+    background:rgba(240,240,240,.5);
     overflow:hidden;
     padding:1em;
-    color:white;
+    color:black;
 }
 
 footer .pie {
