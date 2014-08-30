@@ -1,7 +1,8 @@
 #-*- coding: utf-8 -*-
 
 db.define_table('categorias',
-                Field('nombre')
+                Field('nombre'),
+                format="%(nombre)s"
 )
 
 db.define_table('productos',

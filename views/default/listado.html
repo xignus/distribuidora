@@ -1,11 +1,19 @@
 {{extend 'layout.html'}}
 
 <div class="box">
+  <h2>Productos disponibles para {{=request.args(0)}}</h2>
+  <ul class="submenu">
+    {{for categoria in categorias:}}
+    <li><a href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></li>
+    {{pass}}
+  </ul>
   {{for producto in productos:}}
-  <div class="producto col-sm-3 col-md-4 text-center">
-    <img src="{{=URL('download', args=producto.imagen)}}" class="" alt="" />
-    <h4>{{=producto.nombre}}</h4>
-    <h5><strong>Presentacion: </strong>{{=producto.presentacion}}</h5>
+  <div class="col-sm-6 col-md-3 text-center">
+    <div class="producto">
+      <img src="{{=URL('download', args=producto.productos.imagen)}}" class="img-thumbnail" alt="" /><br />
+      <strong>{{=producto.productos.nombre}}</strong>
+      <em><strong>Presentacion: </strong>{{=producto.productos.presentacion}}<em>
+    </div>
   </div>
   {{pass}}
 </div>
