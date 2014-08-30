@@ -1,0 +1,15 @@
+{{extend 'layout.html'}}
+
+<div class="container">
+  <div class="box">
+    <div class="row">
+      <div class="col-sm-6">
+	<h3>Productos Alco</h3>
+      </div>
+      <div class="col-sm-6">
+	<h3>Canale</h3>
+      </div>
+    </div>
+    
+  </div>
+</div>

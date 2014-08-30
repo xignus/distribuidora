@@ -1,71 +1,72 @@
-Mermelada Boutique de Durazno, 284g
-Mermelada Boutique de Naranja, 284g
-Mermelada Boutique de Ciruela, 284g
-Mermelada Boutique de Frutilla, 284g
-Mermelada Boutique de Frambuesa, 284g
-Mermelada Boutique de Arándanos, 284g
-Mermelada Boutique de Mora, 284g
-Mermelada Boutique Light de Durazno, 250g
-Mermelada Boutique Light de Ciruela, 250g
-Mermelada Boutique Light de Naranja, 250g
-Mermelada Boutique Light de Frutilla, 250g
-Mermelada Boutique Light de Arándano, 250g
-Mermelada Boutique Light de Frambuesa, 250g
-Mermelada de Arándano, 454g
-Mermelada de Ciruela, 454g
-Mermelada de Damasco, 454g
-Mermelada de Durazno, 454g
-Mermelada de Frambuesa, 454g
-Mermelada de Frutilla, 454g
-Mermelada Jale de Membrillo, 454g
-Mermelada de Naranja, 454g
-Mermelada de Tomate, 454g
-Mermelada Light de Arándano, 390g
-Mermelada Light de Ciruela, 390g
-Mermelada Light de Damasco, 390g
-Mermelada Light de Durazno, 390g
-Mermelada Light de Frambuesa, 390g
-Mermelada Light de Frutilla, 390g
-Mermelada Light de Membrillo, 390g
-Mermelada Light de Naranja, 390g
-Puré clásico, 260g
-Puré clásico, 520g
-Pulpa de tomate, 520g
-Extracto triple, 180g
-Extracto doble tomate, 145g
-Tomate entero perita con Albahaca, 400g
-Tomate entero pelado con jugo de tomate, 400g
-Tomate entero pelado con puré de tomate, 400g
-Salsa Pomarola, 350g
-Salsa Portuguesa, 350g
-Salsa Napolitana, 350g
-Salsa Pizza, 350g
-Salsa Filetto, 350g
-Salsa Pomarola Light, 350g
-Salsa Portuguesa Light, 350g
-Salsa Pizza Light, 350g
-Salsa Filetto Light, 350g
-Arvejas secas remojadas, 350g
-Porotos Secos Remojados, 350g
-Garbanzos secos remojados, 350g
-Jardinera de verduras, 350g
-Choclo grano blanco, 350g
-Choclo cremoso grano blanco, 350g
-Choclo grano amarillo, 350g
-Choclo cremoso grano amarillo, 350g
-Pimientos enteros, 160g
-Pimientos en trozos, 180g
-Dulce de Batata, 700g
-Dulce de Membrillo, 700g
-Dulce de Batata con Chocolate, 700g
-Dulce de Batata Light, 610g
-Dulce de Membrillo Llight, 610g
-Duraznos en almíbar en mitades, 820g
-Damascos en almíbar en mitades, 820g
-Coctel 4 frutas, 820g
-Coctel 5 Frutas, 820g
-Peras en almíbar en rodajas, 820g
-Ensalada de frutas en almbíbar, 820g
-Coctel 4 frutas Light, 820g
-Coctel 5 frutas Light, 800g
-Peras en mitades light, 800g
+productos.id,productos.nombre,productos.presentacion,productos.categoria,productos.marca,producto.imagen
+1,Mermelada Boutique de Durazno, 284g,6,Canale,
+2,Mermelada Boutique de Naranja, 284g,6,Canale,
+3,Mermelada Boutique de Ciruela, 284g,6,Canale,
+4,Mermelada Boutique de Frutilla, 284g,6,Canale,
+5,Mermelada Boutique de Frambuesa, 284g,6,Canale,
+6,Mermelada Boutique de Arándanos, 284g,6,Canale,
+7,Mermelada Boutique de Mora, 284g,6,Canale,
+8,Mermelada Boutique Light de Durazno, 250g,6,Canale,
+9,Mermelada Boutique Light de Ciruela, 250g,6,Canale,
+10,Mermelada Boutique Light de Naranja, 250g,6,Canale,
+11,Mermelada Boutique Light de Frutilla, 250g,6,Canale,
+12,Mermelada Boutique Light de Arándano, 250g,6,Canale,
+13,Mermelada Boutique Light de Frambuesa, 250g,6,Canale,
+14,Mermelada de Arándano, 454g,1,Canale,
+15,Mermelada de Ciruela, 454g,1,Canale,
+16,Mermelada de Damasco, 454g,1,Canale,
+17,Mermelada de Durazno, 454g,1,Canale,
+18,Mermelada de Frambuesa, 454g,1,Canale,
+19,Mermelada de Frutilla, 454g,1,Canale,
+20,Mermelada Jale de Membrillo, 454g,1,Canale,
+21,Mermelada de Naranja, 454g,1,Canale,
+22,Mermelada de Tomate, 454g,1,Canale,
+23,Mermelada Light de Arándano, 390g,1,Canale,
+24,Mermelada Light de Ciruela, 390g,1,Canale,
+25,Mermelada Light de Damasco, 390g,1,Canale,
+26,Mermelada Light de Durazno, 390g,1,Canale,
+27,Mermelada Light de Frambuesa, 390g,1,Canale,
+28,Mermelada Light de Frutilla, 390g,1,Canale,
+29,Mermelada Light de Membrillo, 390g,1,Canale,
+30,Mermelada Light de Naranja, 390g,1,Canale,
+31,Puré clásico, 260g,7,Canale,
+32,Puré clásico, 520g,7,Canale,
+33,Pulpa de tomate, 520g,7,Canale,
+34,Extracto triple, 180g,7,Canale,
+35,Extracto doble tomate, 145g,7,Canale,
+36,Tomate entero perita con Albahaca, 400g,7,Canale,
+37,Tomate entero pelado con jugo de tomate, 400g,7,Canale,
+38,Tomate entero pelado con puré de tomate, 400g,7,Canale,
+39,Salsa Pomarola, 350g,7,Canale,
+40,Salsa Portuguesa, 350g,7,Canale,
+41,Salsa Napolitana, 350g,7,Canale,
+42,Salsa Pizza, 350g,7,Canale,
+43,Salsa Filetto, 350g,7,Canale,
+44,Salsa Pomarola Light, 350g,7,Canale,
+45,Salsa Portuguesa Light, 350g,7,Canale,
+46,Salsa Pizza Light, 350g,7,Canale,
+47,Salsa Filetto Light, 350g,7,Canale,
+48,Arvejas secas remojadas, 350g,8,Canale,
+49,Porotos Secos Remojados, 350g,8,Canale,
+50,Garbanzos secos remojados, 350g,8,Canale,
+51,Jardinera de verduras, 350g,8,Canale,
+52,Choclo grano blanco, 350g,8,Canale,
+53,Choclo cremoso grano blanco, 350g,8,Canale,
+54,Choclo grano amarillo, 350g,8,Canale,
+55,Choclo cremoso grano amarillo, 350g,8,Canale,
+56,Pimientos enteros, 160g,8,Canale,
+57,Pimientos en trozos, 180g,8,Canale,
+58,Dulce de Batata, 700g,9,Canale,
+59,Dulce de Membrillo, 700g,9,Canale,
+60,Dulce de Batata con Chocolate, 700g,9,Canale,
+61,Dulce de Batata Light, 610g,9,Canale,
+62,Dulce de Membrillo Llight, 610g,9,Canale,
+63,Duraznos en almíbar en mitades, 820g,2,Canale,
+64,Damascos en almíbar en mitades, 820g,2,Canale,
+65,Coctel 4 frutas, 820g,2,Canale,
+66,Coctel 5 Frutas, 820g,2,Canale,
+67,Peras en almíbar en rodajas, 820g,2,Canale,
+68,Ensalada de frutas en almbíbar, 820g,2,Canale,
+69,Coctel 4 frutas Light, 820g,2,Canale,
+70,Coctel 5 frutas Light, 800g,2,Canale,
+71,Peras en mitades light, 800g,2,Canale,

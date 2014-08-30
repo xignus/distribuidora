@@ -86,3 +86,6 @@ success!
 timestamp: 2014-08-29T11:21:18.588841
 ALTER TABLE productos ADD imagen CHAR(512);
 success!
+timestamp: 2014-08-29T12:35:08.311645
+ALTER TABLE productos ADD marca CHAR(512);
+success!

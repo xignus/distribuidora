@@ -14,7 +14,19 @@ def index():
     imagenes=db(db.slideshow.id>0).select()
     return dict(imagenes=imagenes)
 
+def empresa():
+    return dict()
+    
+def productos():
+    return dict()
 
+def servicios():
+    return dict()
+
+def listado():
+    productos=db(db.productos.marca==request.args(0)).select()
+    return dict(productos=productos)
+    
 def user():
     """
     exposes:

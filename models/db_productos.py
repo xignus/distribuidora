@@ -8,5 +8,6 @@ db.define_table('productos',
                 Field('nombre'),
                 Field('presentacion'),
                 Field('categoria', db.categorias),
+                Field('marca'),
                 Field('imagen','upload')
 )

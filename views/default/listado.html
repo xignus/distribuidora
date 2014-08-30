@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+
+<div class="box">
+  {{for producto in productos:}}
+  <div class="producto col-sm-3 col-md-4 text-center">
+    <img src="{{=URL('download', args=producto.imagen)}}" class="" alt="" />
+    <h4>{{=producto.nombre}}</h4>
+    <h5><strong>Presentacion: </strong>{{=producto.presentacion}}</h5>
+  </div>
+  {{pass}}
+</div>
