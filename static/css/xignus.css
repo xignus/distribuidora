@@ -4,6 +4,10 @@ body{
     background-attachment: fixed;
     
 }
+header {
+    overflow:hidden;
+}
+
 .navbar {
     background-color:#a52a2a;
     border: 1px solid transparent;
@@ -15,18 +19,33 @@ body{
     overflow:hidden;
 }
 
-.submenu li{
-    display:inline;
+.submenu {
+
+    overflow:hidden;
+}
+.submenu .categorias{
+    border: 1px solid #d0d0d0
 }
 
-.submenu li a{
-    background-color: #a52a2a;
-    color: white;
+.submenu .categorias tr td.active{
     font-weight:bold;
+    background-color:#A52A2A;
+}
+
+.submenu .categorias tr td.active a{
+    color:white;
+}
+
+.submenu .categorias tr td a{
+    margin-left:0px;
+    color: ;
     text-decoration:none;
-    padding:5px;
     border-radius:5px;
-    box-shadow: 5px 5px 3px black;
+    font-weight:bold;
+}
+
+.submenu .categorias tr td{
+    padding:0.5em 3em 0.5em 3em;
 }
 
 .mini {
@@ -42,7 +61,7 @@ body{
     margin: 5px 0px 0px 0px;
 }
 
-.submenu li a:hover{
+.submenu .categorias tr td:hover{
     background-color:#ff8000;
     font-size:15px;
 }
@@ -94,7 +113,7 @@ footer .row .pie {
 }
 
 .producto{
-    border:1px solid black;
+ #   border:1px solid black;
     padding:10px;
     border-radius:10px;
     height:200px;

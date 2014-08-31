@@ -1,19 +1,42 @@
 {{extend 'layout.html'}}
 
 <div class="box">
-  <h2>Productos marca {{=request.args(0)}}</h2>
-  <ul class="submenu">
-    {{for categoria in categorias:}}
-    <li><a href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></li>
-    {{pass}}
-  </ul>
-  {{for producto in productos:}}
-  <div class="col-sm-6 col-md-3 text-center">
-    <div class="producto">
-      <img src="{{=URL('download', args=producto.productos.imagen)}}" class="img-thumbnail" alt="" /><br />
-      <strong>{{=producto.productos.nombre}}</strong>
-      <em><strong>Presentacion: </strong>{{=producto.productos.presentacion}}<em>
+  <h2 class="text-center">Productos marca {{=request.args(0)}}</h2>
+  <div class="row">
+    <div class="col-md-2 submenu">
+      <h4 class="text-center">Categorias</h4>
+      <table class="categorias">
+	{{for categoria in categorias:}}
+	{{if request.args(1):}}
+	{{if (categoria.categorias.id==int(request.args(1))):}}
+	<tr>
+	  <td class="active"><a href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></td>
+	</tr>
+	
+	{{else:}}
+	<tr>
+	  <td><a href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></td>
+	</tr>
+	{{pass}}
+	{{else:}}
+	<tr>
+	  <td><a href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></td>
+	</tr>
+	{{pass}}
+	{{pass}}
+	{{pass}}
+      </table>
+    </div>
+    <div class="col-md-10">
+      {{for producto in productos:}}
+      <div class="col-sm-6 col-md-3 text-center">
+	<div class="producto">
+	  <img src="{{=URL('download', args=producto.productos.imagen)}}" class="img-thumbnail" alt="" /><br />
+	  <strong>{{=producto.productos.nombre}}</strong>
+	  <em><strong>Presentacion: </strong>{{=producto.productos.presentacion}}</em>
+	</div>
+      </div>
+      {{pass}}
     </div>
   </div>
-  {{pass}}
 </div>
