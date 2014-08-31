@@ -32,11 +32,12 @@ body{
     padding-left:0px;
     padding-right:-10px;
 }
-
+.contacto {
+    padding:2em;
+}
 .mini div img{
-    border: 2px solid black;
     width:70px;
-    height:70px;
+    height:75px;
     margin: 5px 0px 0px 0px;
 }
 
@@ -62,10 +63,6 @@ body{
 
 .web2py-menu-active {
     background-color:#ff8000;
-}
-
-row {
-    background-color:#A52A2A;
 }
 
 h2, h3 {
@@ -104,12 +101,16 @@ footer {
     height:100px;
     border-radius:10px;
 }
+.row .col-md-4 .box {
+    height:250px;
+}
 .box{
     border:solid rgba(240,240,240,.1) 5px;
     border-radius:10px;
     background:rgba(240,240,240,.5);
     overflow:hidden;
-    padding:1em;
+    padding:1.5em;
+    margin:0.5em;
     color:black;
 }
 
