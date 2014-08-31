@@ -96,33 +96,39 @@
       <footer class="container"><!-- pie -->
 	<div class="row">
 	  <div class="col-sm-4">
-	    <h3><span class="fa fa-group"></span> Nosotros</h3>
-	    <p>Somos una empresa familiar Somos una empresa familiar Somos una empresa familiar</p>
-	    <p>Somos una empresa familiar Somos una empresa familiar Somos una empresa familiar</p>
-	    <p>Somos una empresa familiar Somos una empresa familiar </p>
-	  </div>
-
-	  <div class="col-sm-4">
-	    <h3><span class="fa fa-cubes"></span> Productos</h3>
-	    <p>Algunos de nuestros productos</p>
-	    <div class="row">
-	      {{miniproductos=db(db.productos.id>0).select(orderby='<random>', limitby=(0,9))}}
-	      {{for producto in miniproductos:}}
-	      <div class="mini col-xs-4">
-		<div class="articulo">
-		  <img src="{{=URL('download',args=producto.imagen)}}" class="img-thumbnail" alt="" />
-		</div>
-	      </div>
-	      {{pass}}
+	    <div class="pie">
+	      <h3><span class="fa fa-group"></span> Nosotros</h3>
+	      <p>Somos una empresa familiar Somos una empresa familiar Somos una empresa familiar</p>
+	      <p>Somos una empresa familiar Somos una empresa familiar Somos una empresa familiar</p>
+	      <p>Somos una empresa familiar Somos una empresa familiar </p>
 	    </div>
 	  </div>
 
 	  <div class="col-sm-4">
-	    <h3><span class="fa fa-envelope"></span> Contacto</h3>
-	    <div class="contacto">
-	      <h5><span class="fa fa-globe"></span> Ruta 34, Salta - Jujuy</h5>
-	      <h5><span class="fa fa-phone"></span> (0387)- 5400014</h5>
-	      <h5>contacto@pypdistribuciones.com.ar</h5>
+	    <div class="pie">
+	      <h3><span class="fa fa-cubes"></span> Productos</h3>
+	      <p>Algunos de nuestros productos</p>
+	      <div class="row">
+		{{miniproductos=db(db.productos.id>0).select(orderby='<random>', limitby=(0,9))}}
+		  {{for producto in miniproductos:}}
+		  <div class="mini col-xs-4">
+		    <div class="articulo">
+		      <img src="{{=URL('download',args=producto.imagen)}}" class="img-thumbnail" alt="" />
+		    </div>
+		  </div>
+		  {{pass}}
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="col-sm-4">
+	    <div class="pie">	      
+	      <h3><span class="fa fa-envelope"></span> Contacto</h3>
+	      <div class="contacto">
+		<h5><span class="fa fa-globe"></span> Ruta 34, Salta - Jujuy</h5>
+		<h5><span class="fa fa-phone"></span> (0387)- 5400014</h5>
+		<h5>contacto@pypdistribuciones.com.ar</h5>
+	      </div>
 	    </div>
 	  </div>
 	</div>
