@@ -1,24 +1,26 @@
 {{extend 'layout.html'}}
 <div class="container">
-<!-- start: Flexslider -->
-<div class="slider">
-  <div class="flexslider">
-    <ul class="slides">
-      {{for imagen in imagenes:}}
-      <li>
-	<img src="{{=URL('download',args=imagen.imagen)}}" alt="" />
-	<div class="slide-caption hidden-phone">
-	  <h3>{{=imagen.titulo}}</h3>
-	  <p>{{=imagen.descripcion}}</p>
-	</div>
-      </li>	
-      {{pass}}
-    </ul>
+
+  <!-- start: Flexslider -->
+  <div class="slider">
+    <div class="flexslider">
+      <ul class="slides">
+	{{for imagen in imagenes:}}
+	<li>
+	  <img src="{{=URL('download',args=imagen.imagen)}}" alt="" />
+	  <div class="slide-caption hidden-phone">
+	    <h3>{{=imagen.titulo}}</h3>
+	    <p>{{=imagen.descripcion}}</p>
+	  </div>
+	</li>	
+	{{pass}}
+      </ul>
+    </div>
   </div>
+  <br />
 </div>
-</div>
-<br />
-<!-- end: Flexslider -->
+  <!-- end: Flexslider -->
+
 <div class="row">
   <div class="col-md-4">
     <div class="box">

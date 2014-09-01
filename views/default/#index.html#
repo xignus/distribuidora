@@ -1,0 +1,48 @@
+{{extend 'layout.html'}}
+<div class="container">
+  <!-- start: Flexslider -->
+  <div class="slider">
+    <div class="flexslider">
+      <ul class="slides">
+	{{for imagen in imagenes:}}
+	<li>
+	  <img src="{{=URL('download',args=imagen.imagen)}}" alt="" />
+	  <div class="slide-caption hidden-phone">
+	    <h3>{{=imagen.titulo}}</h3>
+	    <p>{{=imagen.descripcion}}</p>
+	  </div>
+	</li>	
+	{{pass}}
+      </ul>
+    </div>
+  </div>
+  <br />
+</div>
+  <!-- end: Flexslider -->
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="box">
+      <h3 class="text-center"><span class="fa fa-group"></span> Quienes somos</h3>
+      <p>Somos una empresa familiar comprometida con la comunidad, nos especializamos en la distribución de productos alimenticios de las conocidas marcas Alco y Canale para las provincias de Salta y Jujuy.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="box">
+      <h3 class="text-center"><span class="fa fa-bullhorn"></span> Compromiso</h3>
+      <p>Nuestro compromiso esta en hacer llegar a nuestros clientes productos de primera calidad.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="box">
+      <h3 class="text-center"><span class="fa fa-heart"></span> Salud</h3>
+      <p>Nuestros productos estan pensados para comer</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="box">
+      <h3 class="text-center"><span class="fa fa-phone"></span> Contactanos</h3>
+      <p>Si crees que necesitas contactarnos, por favor no dejes de hacerlo!, desde esta web puedes hacerlo por medio del formulario online o buscar los datos en la seccion correspondiente.</p>
+    </div>
+  </div>
+</div>

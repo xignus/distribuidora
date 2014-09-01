@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+
+<div class="box">
+  <h2>Nuestra empresa</h2>
+  {{for elemento in empresa:}}
+  <p>{{=XML(elemento.descripcion_empresa)}}</p>
+  {{pass}}
+</div>

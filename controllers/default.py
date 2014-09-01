@@ -15,7 +15,8 @@ def index():
     return dict(imagenes=imagenes)
 
 def empresa():
-    return dict()
+    empresa=db(db.empresa.id==1).select()
+    return dict(empresa=empresa)
     
 def productos():
     return dict()

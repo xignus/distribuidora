@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'DAL' object has no attribute 'empresa'"
+p3
+sS'layer'
+p4
+S'/home/marco/trabajo/experimental/web2py/applications/distribuidora/controllers/adminweb.py'
+p5
+sS'code'
+p6
+S'#-*- coding: utf-8 -*-\n\ndef slideshow():\n    nueva=SQLFORM(db.slideshow)\n    if nueva.process().accepts:\n        pass\n    elif nueva.errors:\n        response.flash="Errors!"\n        \n    return dict(nueva=nueva)\n\ndef productos():\n    # nuevo = SQLFORM(db.productos)\n\n    # if nuevo.process().accepts:\n    #     session.flash="El producto ha sido agregado"\n    # elif nuevo.errors:\n    #     response.flash="Por favor revise los datos"\n    db.productos.id.readable=False\n    lista = SQLFORM.grid(db.productos, ui=\'jquery-ui\', user_signature=False)\n\n    return dict(lista=lista)\n\ndef empresa():\n    if (db(db.empresa.id>0).select()):\n        empresa=SQLFORM(db.empresa, 1)\n    else:\n        empresa=SQLFORM(db.empresa)\n    return dict(empresa=empresa)\n\nresponse._vars=response._caller(empresa)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/marco/trabajo/experimental/web2py/gluon/restricted.py", line 221, in restricted\n    exec ccode in environment\n  File "/home/marco/trabajo/experimental/web2py/applications/distribuidora/controllers/adminweb.py", line 31, in <module>\n  File "/home/marco/trabajo/experimental/web2py/gluon/globals.py", line 389, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/marco/trabajo/experimental/web2py/applications/distribuidora/controllers/adminweb.py", line 25, in empresa\n    if (db(db.empresa.id>0).select()):\n  File "/home/marco/trabajo/experimental/web2py/gluon/dal.py", line 8464, in __getattr__\n    return ogetattr(self, key)\nAttributeError: \'DAL\' object has no attribute \'empresa\'\n'
+p11
+s.
