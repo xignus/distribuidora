@@ -1,7 +1,5 @@
 {{extend 'layoutadmin.html'}}
 
+{{=nueva}}
 
-    {{=lista}}
-
-
-
+{{lista}}

@@ -9,8 +9,8 @@ def slideshow():
         pass
     elif nueva.errors:
         response.flash="Errors!"
-        
-    return dict(nueva=nueva)
+    lista=db(db.slideshow.id>0).select()
+    return dict(nueva=nueva, lista=lista)
 
 def productos():
     # nuevo = SQLFORM(db.productos)
@@ -25,6 +25,7 @@ def productos():
     return dict(lista=lista)
 
 def empresa():
+    db.empresa.id.readable=False
     if (db(db.empresa.id>0).select()):
         empresa=SQLFORM(db.empresa, 1)
     else:
