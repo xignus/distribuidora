@@ -3,7 +3,7 @@
 <div class="box">
   <h2 class="text-center">Productos marca {{=request.args(0)}}</h2>
   <div class="row">
-    <div class="col-md-2 submenu">
+    <div class="col-xs-2 submenu">
       <h4 class="text-center">Categorias</h4>
       <table class="categorias">
 	{{for categoria in categorias:}}
@@ -27,7 +27,7 @@
 	{{pass}}
       </table>
     </div>
-    <div class="col-md-10">
+    <div class="col-xs-10">
       {{for producto in productos:}}
       <div class="col-sm-6 col-md-3 text-center">
 	<div class="producto">
