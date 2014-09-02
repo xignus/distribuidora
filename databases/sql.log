@@ -128,3 +128,7 @@ success!
 timestamp: 2014-09-02T01:48:49.529460
 ALTER TABLE auth_user ADD username CHAR(128);
 success!
+timestamp: 2014-09-02T16:45:02.390495
+ALTER TABLE slideshow ADD activo CHAR(1);
+success!
+success!

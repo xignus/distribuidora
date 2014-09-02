@@ -6,3 +6,19 @@
 #page-wrapper {
     padding-top:3em;
 }
+.panel-heading {
+    overflow:hidden;
+}
+
+.panel-heading a {
+    margin-top: 0px;
+}
+
+.logo {
+    background-color:#a5a5a5;
+    border-radius: 20px;
+}
+
+.boton {
+    margin-bottom:15px;
+}

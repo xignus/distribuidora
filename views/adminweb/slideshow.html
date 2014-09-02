@@ -1,6 +1,16 @@
 {{extend 'layoutadmin.html'}}
+<h3>Imagenes de portada</h3>
+<hr />
 
-{{=nueva}}
+<div class="boton">
+  <a href="#" class="btn btn-primary add_new"><span class="fa fa-plus"></span> Nueva imagen</a>  
+</div>
+
+
+<div class="well new_form">
+  {{=nueva}}  
+</div>
+
 
 <div class="row">
   {{for elemento in lista:}}
@@ -8,7 +18,7 @@
     <div class="panel panel-info">
       <div class="panel-heading">
 	{{=elemento.titulo}}
-	<a class="btn pull-right"><span class="fa fa-pencil"></span></a>
+	<a class="btn pull-right"data-toggle="modal" data-target="#editar{{=elemento.id}}"><span class="fa fa-pencil"></span></a>
       </div>
       <div class="panel-body">
 	<img src="{{=URL('default','download', args=elemento.imagen)}}" class="img-thumbnail" alt="" />
@@ -21,3 +31,19 @@
   {{pass}}
 </div>
 
+{{for elemento in lista:}}
+<!-- Modal -->
+<div class="modal fade" id="editar{{=elemento.id}}" tabindex="-1" role="dialog" aria-labelledby="editar{{=elemento.id}}Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="editar{{=elemento.id}}Label">Editar imagen</h4>
+      </div>
+      <div class="modal-body">
+        {{=crud.update(db.slideshow, elemento.id, next=URL('adminweb','slideshow'))}}
+      </div>
+    </div>
+  </div>
+</div>
+{{pass}}

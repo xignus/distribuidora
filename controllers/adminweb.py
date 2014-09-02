@@ -5,11 +5,14 @@ def index():
 
 @auth.requires_membership('adminweb')
 def slideshow():
+    db.slideshow.id.readable=False
     nueva=SQLFORM(db.slideshow)
     if nueva.process().accepts:
         pass
     elif nueva.errors:
         response.flash="Errors!"
+
+    nueva.add_button("Cancel",URL(r=request,f='slideshow'))
     lista=db(db.slideshow.id>0).select()
     return dict(nueva=nueva, lista=lista)
 

@@ -1,0 +1,6 @@
+var new_content = function(){
+    $('.new_form').hide();
+    $('.add_new').click
+}
+
+new_content()

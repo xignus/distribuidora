@@ -19,17 +19,22 @@ header {
     overflow:hidden;
 }
 
-.submenu {
-
+.fix {
     overflow:hidden;
+}
+
+.submenu {
+    background-color:#f5f5f5;
+    overflow:hidden;
+    border-radius:5px;
+    width:180px;
 }
 .submenu .categorias{
 
 }
 
 .submenu .categorias tr td.active{
-    font-weight:bold;
-    background-color:#A52A2A;
+     background-color:#ff8000;
 }
 
 .submenu .categorias tr td.active a{
@@ -46,8 +51,11 @@ header {
     height:100%;
 }
 
+.submenu .categorias tr {
+    width:100%;
+}
 .submenu .categorias tr td{
-    border: 1px solid #d0d0d0;
+#    border: 1px solid #d0d0d0;
     padding:0.3em 1em 0.3em 1.5em;
 }
 
@@ -116,7 +124,7 @@ footer .row .pie {
 }
 
 .panel{
-    height:330px;
+    height:320px;
     overflow:hidden;
 }
 
