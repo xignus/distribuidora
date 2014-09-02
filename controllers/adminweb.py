@@ -55,8 +55,10 @@ def nuevoservicio():
     db.detalles.servicio.readable=False
     db.detalles.servicio.writable=False
     db.detalles.servicio.default=int(request.args(0))
-        
-    nuevo=SQLFORM(db.detalles)
+    if request.args(1):
+        nuevo=SQLFORM(db.detalles, request.args(1))
+    else:
+        nuevo=SQLFORM(db.detalles)
 
     if nuevo.process().accepts:
         session.flash="Se han guardado los datos correctamente"
