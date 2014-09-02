@@ -5,13 +5,15 @@
     <div class="flexslider">
       <ul class="slides">
 	{{for imagen in imagenes:}}
+	{{if imagen.activo:}}
 	<li>
 	  <img src="{{=URL('download',args=imagen.imagen)}}" alt="" />
 	  <div class="slide-caption hidden-phone">
 	    <h3>{{=imagen.titulo}}</h3>
 	    <p>{{=imagen.descripcion}}</p>
 	  </div>
-	</li>	
+	</li>
+	{{pass}}
 	{{pass}}
       </ul>
     </div>
