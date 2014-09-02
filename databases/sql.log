@@ -125,3 +125,6 @@ CREATE TABLE detalles(
     publicar CHAR(1)
 );
 success!
+timestamp: 2014-09-02T01:48:49.529460
+ALTER TABLE auth_user ADD username CHAR(128);
+success!

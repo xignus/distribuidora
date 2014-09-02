@@ -1,8 +1,9 @@
 #-*- coding: utf-8 -*-
-
+@auth.requires_membership('adminweb')
 def index():
     return dict()
 
+@auth.requires_membership('adminweb')
 def slideshow():
     nueva=SQLFORM(db.slideshow)
     if nueva.process().accepts:
@@ -12,6 +13,7 @@ def slideshow():
     lista=db(db.slideshow.id>0).select()
     return dict(nueva=nueva, lista=lista)
 
+@auth.requires_membership('adminweb')
 def productos():
     # nuevo = SQLFORM(db.productos)
 
@@ -24,6 +26,7 @@ def productos():
 
     return dict(lista=lista)
 
+@auth.requires_membership('adminweb')
 def empresa():
     db.empresa.id.readable=False
     if (db(db.empresa.id>0).select()):
@@ -36,7 +39,8 @@ def empresa():
     elif empresa.errors:
         response.flash="Revise los datos"
     return dict(empresa=empresa)
-
+    
+@auth.requires_membership('adminweb')
 def servicios():
     listado=db((db.servicios.id>0)&(db.detalles.servicio==db.servicios.id)&(db.detalles.publicar==True)).select()
 
@@ -49,7 +53,8 @@ def servicios():
         response.flash="Revise los datos"
 
     return dict(listado=listado, nuevo=nuevo)
-
+    
+@auth.requires_membership('adminweb')
 def nuevoservicio():
     db.detalles.id.readable=False
     db.detalles.servicio.readable=False
@@ -62,6 +67,7 @@ def nuevoservicio():
 
     if nuevo.process().accepts:
         session.flash="Se han guardado los datos correctamente"
+        redirect(URL('adminweb','servicios'))
     elif nuevo.errors:
         response.flash="Revise los datos"
     else:
@@ -69,5 +75,11 @@ def nuevoservicio():
 
     return dict(nuevo=nuevo)
 
+@auth.requires_membership('adminweb')
 def editarservicio():
     return dict()
+
+@auth.requires_membership('adminweb')
+def misdatos():
+    myid=crud.update(db.auth_user, session.auth.user.id)
+    return dict(myid=myid)

@@ -25,7 +25,7 @@ response.google_analytics_id = None
 if not(session.auth):
     last_option = (T('Entrar'), ((request.controller=='default')&(request.function=='user')), URL('default', 'user/login'), [])
 else:
-    last_option = (T('Panel'), ((request.controller=='default')&(request.function=='user')), URL('default', 'user/profile'), [])
+    last_option = (T('Panel'), False, URL('adminweb', 'index'), [])
 
 response.menu = [
     (T('Inicio'), ((request.controller=='default')&(request.function=='index')), URL('default', 'index'), []),
