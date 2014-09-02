@@ -2,4 +2,22 @@
 
 {{=nueva}}
 
-{{=lista}}
+<div class="row">
+  {{for elemento in lista:}}
+  <div class="col-sm-4">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+	{{=elemento.titulo}}
+	<a class="btn pull-right"><span class="fa fa-pencil"></span></a>
+      </div>
+      <div class="panel-body">
+	<img src="{{=URL('default','download', args=elemento.imagen)}}" class="img-thumbnail" alt="" />
+      </div>
+      <div class="panel-footer">
+	{{=elemento.descripcion}}
+      </div>
+    </div>
+  </div>
+  {{pass}}
+</div>
+

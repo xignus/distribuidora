@@ -42,7 +42,7 @@ def empresa():
     
 @auth.requires_membership('adminweb')
 def servicios():
-    listado=db((db.servicios.id>0)&(db.detalles.servicio==db.servicios.id)&(db.detalles.publicar==True)).select()
+    listado=db(db.detalles.servicio==db.servicios.id).select()
 
     nuevo = SQLFORM(db.servicios)
 
@@ -65,7 +65,7 @@ def nuevoservicio():
     else:
         nuevo=SQLFORM(db.detalles)
 
-    if nuevo.process().accepts:
+    if nuevo.process().accepted:
         session.flash="Se han guardado los datos correctamente"
         redirect(URL('adminweb','servicios'))
     elif nuevo.errors:
