@@ -55,6 +55,7 @@ def servicios():
     elif nuevo.errors:
         response.flash="Revise los datos"
 
+    nuevo.add_button("Cancel",URL(r=request,f='servicios'))
     return dict(listado=listado, nuevo=nuevo)
     
 @auth.requires_membership('adminweb')

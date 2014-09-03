@@ -1,8 +1,13 @@
+@font-face {
+    font-family:okolaks;
+    src: url(../fonts/okolaksRegular.ttf);
+}
+
 body{
     background-image: url('../images/fondo-verde.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+    font-family:okolaks;
 }
 header {
     overflow:hidden;
