@@ -134,12 +134,13 @@ footer .row .pie {
 }
 
 .panel{
-    height:320px;
+    height:360px;;
     overflow:hidden;
 }
 
 .panel-footer{
     height:100%;
+    overflow:hidden;
 }
 .row .col-md-4 .box {
     height:250px;
@@ -147,12 +148,16 @@ footer .row .pie {
 .box{
     border:solid rgba(240,240,240,.1) 5px;
     border-radius:10px;
-    background:rgba(110,255,255,.4);
+    background:rgba(254,254,254,.4);
     box-shadow: 10px 10px 5px black;
     overflow:hidden;
     padding:1.5em;
     margin:0.5em;
     color:black;
+}
+
+.panel-body .img-thumbnail {
+    height:160px;
 }
 
 /* Flexslider
