@@ -171,7 +171,7 @@ footer .row .pie {
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides > li {position: relative;  zoom: 1; display: none; -webkit-backface-visibility: hidden;}
-.flexslider .slides img {width: 100%; display: block;}
+.flexslider .slides img {width: 100%; display: block; height:258px}
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
@@ -287,7 +287,6 @@ html[xmlns] .slides {display: block;}
 .flex-control-paging li a.flex-active {
 	cursor: default;
 }
-
 
 /* Caption
 =================================================================== */
