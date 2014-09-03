@@ -113,6 +113,10 @@ header {
     box-shadow: 10px 10px 5px #888888;
 }
 
+.marcas img:hover{
+    border:2px solid #ff8000;
+}
+
 footer {
     padding-left:100px;
     padding-right:100px;
@@ -143,7 +147,7 @@ footer .row .pie {
 .box{
     border:solid rgba(240,240,240,.1) 5px;
     border-radius:10px;
-    background:rgba(240,240,240,.5);
+    background:rgba(110,255,255,.4);
     box-shadow: 10px 10px 5px black;
     overflow:hidden;
     padding:1.5em;

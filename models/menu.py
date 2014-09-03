@@ -31,7 +31,7 @@ response.menu = [
     (T('Inicio'), ((request.controller=='default')&(request.function=='index')), URL('default', 'index'), []),
     (T('Empresa'), ((request.controller=='default')&(request.function=='empresa')), URL('default', 'empresa'), []),
     (T('Productos'), ((request.controller=='default')&(request.function=='productos')), URL('default', 'productos'), []),
-    (T('Servicios'), ((request.controller=='default')&(request.function=='servicios')), URL('default', 'servicios'), []),
+#    (T('Servicios'), ((request.controller=='default')&(request.function=='servicios')), URL('default', 'servicios'), []),
     (A(SPAN(_class='fa fa-envelope'), False, "#myModal", _class="contact")),
     last_option
 ]
