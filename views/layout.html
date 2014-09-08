@@ -67,30 +67,31 @@
   <body>
     <div class="container">
       <!-- Navbar ================================================== -->
-      <div class="row">
-	<div class="flash">{{=response.flash or ''}}</div>
-	<header class="container"><!-- encabezado -->
+      <div class="">
+	<header><!-- encabezado -->
 	  <div class="row">
-	    <nav class="navbar pull" role="navigation">
-	      {{is_mobile=request.user_agent().is_mobile}}
-              <!-- the next tag is necessary for bootstrap menus, do not remove -->
-              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" style="{{='display:none;' if not is_mobile else ''}}">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-              </button>
-              {{=response.logo or ''}}
-	      <div class="{{='nav-collapse' if is_mobile else 'nav'}} pull-right ">
-		{{if response.menu:}}
-		{{=MENU(response.menu, _class='mobile-menu navbar' if is_mobile else 'nav navbar-nav',mobile=is_mobile,li_class='dropdown',ul_class='dropdown-menu')}}
-		{{pass}}
-              </div><!--/.nav-collapse -->
-	    </nav>
+	    <div class="col-xs-4">
+	      
+	    </div>
+	    <div class="col-xs-4">
+	      <div class="text-center">
+		{{=response.logo or ''}}
+	      </div>
+	    </div>
+	    <div class="col-xs-4">
+	      
+	    </div>
+	  </div>
+	  
+	  <div class="row">
+	  {{if response.menu:}}
+	  {{=MENU(response.menu, _class="web2py-menu text-center")}}
+	  {{pass}}
 	  </div>
 	</header> <!-- fin encabezado -->
       </div>
-
-      {{include}}
+	
+	{{include}}
     </div> <!-- /container -->
 
       <!-- Footer ================================================== -->

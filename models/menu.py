@@ -6,7 +6,7 @@
 ## Customize your APP title, subtitle and menus here
 #########################################################################
 
-response.logo = A(IMG(_src=URL('static','images/logoclaro2.png'), _class='logo pull-left'),_href='http://pypdistribuciones.com.ar')
+response.logo = A(IMG(_src=URL('static','images/logoclaro2.png'), _class='logo'),_href='http://pypdistribuciones.com.ar')
 response.title = request.application.replace('_',' ').title()
 response.subtitle = ''
 
