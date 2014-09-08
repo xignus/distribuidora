@@ -166,10 +166,10 @@ footer {
     padding-left:100px;
     padding-right:100px;
     padding-bottom:30px;
-    background-color:#A52A2A;
     color:white;
     margin:1em 0px 0px 0px;
     border-radius:10px 10px 0px 0px;
+    background:linear-gradient(#003399,#3333cc);
     width:100%;
     overflow:hidden
 }
