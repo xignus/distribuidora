@@ -42,7 +42,7 @@ div .nav {
 
 ul.web2py-menu li{
     display:inline;
-    padding:1em;
+    padding:1.5em;
     margin:.5em;
     border-radius:15px;
     background:linear-gradient(#0099ff ,#6633ff );
@@ -67,12 +67,15 @@ ul.web2py-menu li{
 .web2py-menu li:hover {
     background:linear-gradient(#6633ff, #0099ff);
     color:#ff8000;
-    padding:2em;
+    padding:3em 2em 2em 2em;
 }
 
 .web2py-menu li:hover a span.fa{
     display:inline;
     font-size:30px;
+    background-color:rgba(0,0,0,.2);
+    border-radius:50%;
+    padding:15px;
 }
 
 .web2py-menu li:hover a {
