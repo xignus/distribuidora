@@ -45,11 +45,13 @@ ul.web2py-menu li{
     padding:1em;
     margin:1em;
     border-radius:15px;
+    background:linear-gradient(#A52A2A ,#330000 );
+    -moz-transition:padding .4s;
 }
 
 .web2py-menu li a {
     margin: 5px 0px 5px 0px;
-    color:black;
+    color:white;
     font-weight:bold;
 }
 
@@ -58,12 +60,13 @@ ul.web2py-menu li{
 }
 
 .web2py-menu li:hover {
-    background-color:red;
+    background:linear-gradient(#330000, #a52a2a);
     color:#ff8000;
+    padding:2em;
 }
 
-.web2py-menu-active {
-    background-color:#ff8000;
+.web2py-menu .web2py-menu-active {
+    background:linear-gradient(#cc3300,#cc3300);
 }
 
 .fix {
