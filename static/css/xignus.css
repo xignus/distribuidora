@@ -45,26 +45,27 @@ ul.web2py-menu li{
     padding:1em;
     margin:.5em;
     border-radius:15px;
-    background:linear-gradient(#A52A2A ,#330000 );
-    -moz-transition:padding .6s;
+    background:linear-gradient(#0099ff ,#6633ff );
+    -moz-transition:padding .8s;
 }
 
 .web2py-menu li a {
     margin: 5px 0px 5px 0px;
     color:white;
     font-weight:bold;
-    -moz-transition:font-size .6s;
+    -moz-transition:font-size .8s;
 }
 
 .web2py-menu li a span{
-    -moz-transition:font-size .6s;
+    display:none;
+    -moz-transition:font-size .8s;
 }
 .web2py-menu li a:hover{
     text-decoration:none;
 }
 
 .web2py-menu li:hover {
-    background:linear-gradient(#330000, #a52a2a);
+    background:linear-gradient(#6633ff, #0099ff);
     color:#ff8000;
     padding:2em;
 }
@@ -77,12 +78,9 @@ ul.web2py-menu li{
 .web2py-menu li:hover a {
     font-size:0;
 }
-.web2py-menu li a span.fa{
-    display:none;
-}
 
 .web2py-menu .web2py-menu-active {
-    background:linear-gradient(#cc3300,#cc3300);
+    background:linear-gradient(#003399,#3333cc);
 }
 
 .fix {
