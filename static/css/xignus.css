@@ -47,6 +47,7 @@ ul.web2py-menu li{
     border-radius:15px;
     background:linear-gradient(#0099ff ,#6633ff );
     -moz-transition:padding .8s;
+    box-shadow: 5px 5px 3px black;
 }
 
 .web2py-menu li a {
