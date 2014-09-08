@@ -43,18 +43,22 @@ div .nav {
 ul.web2py-menu li{
     display:inline;
     padding:1em;
-    margin:1em;
+    margin:.5em;
     border-radius:15px;
     background:linear-gradient(#A52A2A ,#330000 );
-    -moz-transition:padding .4s;
+    -moz-transition:padding .6s;
 }
 
 .web2py-menu li a {
     margin: 5px 0px 5px 0px;
     color:white;
     font-weight:bold;
+    -moz-transition:font-size .6s;
 }
 
+.web2py-menu li a span{
+    -moz-transition:font-size .6s;
+}
 .web2py-menu li a:hover{
     text-decoration:none;
 }
@@ -63,6 +67,18 @@ ul.web2py-menu li{
     background:linear-gradient(#330000, #a52a2a);
     color:#ff8000;
     padding:2em;
+}
+
+.web2py-menu li:hover a span.fa{
+    display:inline;
+    font-size:30px;
+}
+
+.web2py-menu li:hover a {
+    font-size:0;
+}
+.web2py-menu li a span.fa{
+    display:none;
 }
 
 .web2py-menu .web2py-menu-active {
