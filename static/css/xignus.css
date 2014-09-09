@@ -123,6 +123,7 @@ ul.web2py-menu li{
 .submenu .categorias tr td{
 #    border: 1px solid #d0d0d0;
     padding:0.3em 1em 0.3em 1.5em;
+    max-width:200px;
     
 }
 
