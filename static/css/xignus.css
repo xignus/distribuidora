@@ -97,9 +97,6 @@ ul.web2py-menu li{
     border-radius:5px;
     width:180px;
 }
-.submenu .categorias{
-
-}
 
 .submenu .categorias tr td.active{
      background-color:#ff8000;
@@ -107,6 +104,7 @@ ul.web2py-menu li{
 
 .submenu .categorias tr td.active a{
     color:white;
+    
 }
 
 .submenu .categorias tr td a{
@@ -125,16 +123,24 @@ ul.web2py-menu li{
 .submenu .categorias tr td{
 #    border: 1px solid #d0d0d0;
     padding:0.3em 1em 0.3em 1.5em;
+    
+}
+
+.footfood .col-xs-4 {
+    padding-left:1px;
+    padding-right:2px;
+    margin-right:0px;
 }
 
 .mini {
     padding-left:0px;
-    padding-right:-10px;
+    padding-right:0px;
 }
 .contacto {
     padding:2em;
 }
-.mini div img{
+
+.mini div.articulo img.img-thumbnail{
     width:70px;
     height:75px;
     margin: 5px 0px 0px 0px;
@@ -170,6 +176,7 @@ footer {
     margin:1em 0px 0px 0px;
     border-radius:10px 10px 0px 0px;
     background:linear-gradient(#003399,#3333cc);
+    box-shadow: 10px 10px 5px black;
     width:100%;
     overflow:hidden
 }

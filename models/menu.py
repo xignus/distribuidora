@@ -22,6 +22,13 @@ response.google_analytics_id = None
 ## this is the main application menu add/remove items as required
 #########################################################################
 
+if not(session.auth):
+    last_option = (A(SPAN(_class='fa fa-sign-in')+' Entrar', ((request.controller=='default')&(request.function=='user')), URL('default', 'user/login')))
+    
+else:
+    last_option = (A(SPAN(_class='fa fa-wrench')+' Panel', ((request.controller=='adminweb')&(request.function=='index')), URL('adminweb', 'index')))
+
+
 #if not(session.auth):
 #      last_option=(A(SPAN(_class='fa fa-sign-in')+" Entrar", ((request.controller=='default')&(request.function=='user')), URL('default', 'user/login'))),
 # else:
@@ -32,7 +39,7 @@ response.menu = [
     (A(SPAN(_class='fa fa-building')+" Empresa", ((request.controller=='default')&(request.function=='empresa')), URL('default', 'empresa'))),
     (A(SPAN(_class='fa fa-cubes')+" Productos", ((request.controller=='default')&(request.function=='productos')), URL('default', 'productos'))),
     (A(SPAN(_class='fa fa-envelope')+" Contacto", False, "#myModal", _class="contact")),
-#    last_option,
+    last_option,
 ]
 
 DEVELOPMENT_MENU = False

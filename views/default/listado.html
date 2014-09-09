@@ -6,7 +6,7 @@
     <div class="col-xs-2 fix">
       <div class="submenu">
 	<h4 class="text-center">Categorias</h4>
-	<table class="categorias">
+	<table class="categorias table">
 	  {{for categoria in categorias:}}
 	  {{if request.args(1):}}
 	  {{if (categoria.categorias.id==int(request.args(1))):}}
