@@ -188,6 +188,7 @@ footer .row .pie {
     height:360px;;
     overflow:hidden;
     max-width:200px;
+    min-width:200px;
 }
 
 .panel-footer{
