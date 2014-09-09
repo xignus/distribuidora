@@ -3,7 +3,7 @@
 <div class="box">
   <h2 class="text-center">Productos marca {{=request.args(0)}}</h2>
   <div class="row">
-    <div class="col-xs-2 fix">
+    <div class="col-xs-4 fix">
       <div class="submenu">
 	<h4 class="text-center">Categorias</h4>
 	<table class="categorias table">
@@ -29,7 +29,7 @@
 	</table>
       </div>
     </div>
-    <div class="col-xs-10 fix">
+    <div class="col-xs-8 fix">
       {{for producto in productos:}}
       <div class="col-xs-6 col-md-3 text-center">
 	<div class="panel panel-primary">
