@@ -83,72 +83,90 @@
 	    </div>
 	  </div>
 	  
-	  <div class="container text-center">
-	  {{if response.menu:}}
-	  {{=MENU(response.menu, _class="nav nav-pills")}}
-	  {{pass}}
+	  <div class="menu pull-right">
+	    {{if response.menu:}}
+	    {{=MENU(response.menu, _class="text-center nav nav-pills")}}
+	    {{pass}}
 	  </div>
 	</header> <!-- fin encabezado -->
       </div>
-	
-	{{include}}
+      
+      {{include}}
     </div> <!-- /container -->
 
-      <!-- Footer ================================================== -->
-      <footer class="container"><!-- pie -->
-	<div class="row">
-	  <div class="col-sm-4">
-	    <div class="pie">
-	      <h3><span class="fa fa-group"></span> Nosotros</h3>
-	      <p>Somos una empresa familiar Somos una empresa familiar Somos una empresa familiar</p>
-	      <p>Somos una empresa familiar Somos una empresa familiar Somos una empresa familiar</p>
-	      <p>Somos una empresa familiar Somos una empresa familiar </p>
-	    </div>
+    <!--Contact modal form-->
+    <div class="modal fade" id="MyContact" tabindex="-1" role="dialog" aria-labelledby="MyContactLabel" aria-hidden="true">
+      <div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="MyContactLabel">Contacto</h4>
 	  </div>
+	  <div class="modal-body">
+            {{=crud.create(db.contacto)}}
+	  </div>
+	</div>
+      </div>
+    </div>
+    
+    
+    <!--Contact modal form-->
+    
+    <!-- Footer ================================================== -->
+    <footer class="container"><!-- pie -->
+      <div class="row">
+	<div class="col-sm-4">
+	  <div class="pie">
+	    <h3><span class="fa fa-group"></span> Nosotros</h3>
+	    {{for descripcion in db(db.empresa.id>0).select():}}
+	    {{=XML(descripcion.descripcion_empresa)}}
+	    {{pass}}
+	  </div>
+	</div>
 
-	  <div class="col-sm-4">
-	    <div class="pie">
-	      <h3><span class="fa fa-cubes"></span> Productos</h3>
-	      <p>Algunos de nuestros productos</p>
-	      <div class="footfood row">
-		{{miniproductos=db(db.productos.id>0).select(orderby='<random>', limitby=(0,9))}}
-		  {{for producto in miniproductos:}}
-		  <div class="col-xs-4">
-		    <div class="mini">
-		      <div class="articulo">
-			<img src="{{=URL('download',args=producto.imagen)}}" class="img-thumbnail" alt="" />
-		      </div>
+	<div class="col-sm-4">
+	  <div class="pie">
+	    <h3><span class="fa fa-cubes"></span> Productos</h3>
+	    <p>Algunos de nuestros productos</p>
+	    <div class="footfood row">
+	      {{miniproductos=db(db.productos.id>0).select(orderby='<random>', limitby=(0,9))}}
+		{{for producto in miniproductos:}}
+		<div class="col-xs-4">
+		  <div class="mini">
+		    <div class="articulo">
+		      <img src="{{=URL('download',args=producto.imagen)}}" class="img-thumbnail" alt="" />
 		    </div>
 		  </div>
-		  {{pass}}
-	      </div>
-	    </div>
-	  </div>
-
-	  <div class="col-sm-4">
-	    <div class="pie">	      
-	      <h3><span class="fa fa-envelope"></span> Contacto</h3>
-	      <div class="contacto">
-		<h5><span class="fa fa-globe"></span> Ruta 34, Salta - Jujuy</h5>
-		<h5><span class="fa fa-phone"></span> (0387)- 5400014</h5>
-		<p>contacto@pypdistribuciones.com.ar</p>
-	      </div>
+		</div>
+		{{pass}}
 	    </div>
 	  </div>
 	</div>
-      </footer><!-- fin pie -->
-      <div class="clearfix"></div>
 
-      <!-- The javascript =============================================
-	   (Placed at the end of the document so the pages load faster) -->
-      <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
-      <script src="{{=URL('static','js/web2py_bootstrap.js')}}"></script>
-      <script src="{{=URL('static','js/flexslider.js')}}"></script>
-      <script src="{{=URL('static','js/pyp.js')}}"></script>
-      <!--[if lt IE 7 ]>
-	  <script src="{{=URL('static','js/dd_belatedpng.js')}}"></script>
-	  <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
-	  <![endif]-->      
+	<div class="col-sm-4">
+	  <div class="pie">	      
+	    <h3><span class="fa fa-envelope"></span> Contacto</h3>
+	    <div class="contacto">
+	      <h5><span class="fa fa-globe"></span> Ruta 34, Salta - Jujuy</h5>
+	      <h5><span class="fa fa-phone"></span> (0387)- 5400014</h5>
+	      <p>contacto@pypdistribuciones.com.ar</p>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </footer><!-- fin pie -->
+    <div class="clearfix"></div>
+
+    <!-- The javascript =============================================
+	 (Placed at the end of the document so the pages load faster) -->
+    <script src="{{=URL('static','js/bootstrap.min.js')}}"></script>
+    <script src="{{=URL('static','js/web2py_bootstrap.js')}}"></script>
+    <script src="{{=URL('static','js/flexslider.js')}}"></script>
+    <script src="{{=URL('static','js/pyp.js')}}"></script>
+    <!--[if lt IE 7 ]>
+	<script src="{{=URL('static','js/dd_belatedpng.js')}}"></script>
+	<script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+	<![endif]-->      
   </body>
 </html>
 

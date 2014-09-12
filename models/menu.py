@@ -23,10 +23,10 @@ response.google_analytics_id = None
 #########################################################################
 
 if not(session.auth):
-    last_option = (A(SPAN(_class='fa fa-sign-in')+BR()+' Entrar', ((request.controller=='default')&(request.function=='user')), URL('default', 'user/login')))
+    last_option = (A(SPAN(_class='fa fa-sign-in')+' Entrar', ((request.controller=='default')&(request.function=='user')), URL('default', 'user/login')))
     
 else:
-    last_option = (A(SPAN(_class='fa fa-wrench')+BR()+' Panel', ((request.controller=='adminweb')&(request.function=='index')), URL('adminweb', 'index')))
+    last_option = (A(SPAN(_class='fa fa-wrench')+' Panel', ((request.controller=='adminweb')&(request.function=='index')), URL('adminweb', 'index')))
 
 
 #if not(session.auth):
@@ -35,121 +35,11 @@ else:
 #     last_option=(A(SPAN(_class='fa fa-wrench')+" Panel", ((request.controller=='adminweb')&(request.function=='index')), URL('adminweb', 'index'))),
 
 response.menu = [
-    (A(SPAN(_class='fa fa-home')+BR()+" Inicio", ((request.controller=='default')&(request.function=='index')), URL('default', 'index'),_class='opcion')),
-    (A(SPAN(_class='fa fa-building')+BR()+" Empresa", ((request.controller=='default')&(request.function=='empresa')), URL('default', 'empresa'))),
-    (A(SPAN(_class='fa fa-cubes')+BR()+" Productos", ((request.controller=='default')&(request.function=='productos')), URL('default', 'productos'))),
-    (A(SPAN(_class='fa fa-envelope')+BR()+" Contacto", False, "#myModal", _class="contact")),
+    (A(SPAN(_class='fa fa-home')+" Inicio", ((request.controller=='default')&(request.function=='index')), URL('default', 'index'))),
+    (A(SPAN(_class='fa fa-building')+" Empresa", ((request.controller=='default')&(request.function=='empresa')), URL('default', 'empresa'))),
+    (A(SPAN(_class='fa fa-cubes')+" Productos", ((request.controller=='default')&(request.function=='productos')), URL('default', 'productos'))),
+    (A(SPAN(_class='fa fa-envelope')+" Contacto", False, "#myModal", _class="contacto")),
     last_option,
 ]
-
-DEVELOPMENT_MENU = False
-
-#########################################################################
-## provide shortcuts for development. remove in production
-#########################################################################
-
-def _():
-    # shortcuts
-    app = request.application
-    ctr = request.controller
-    # useful links to internal and external resources
-    response.menu += [
-        (SPAN('web2py', _class='highlighted'), False, 'http://web2py.com', [
-        (T('My Sites'), False, URL('admin', 'default', 'site')),
-        (T('This App'), False, URL('admin', 'default', 'design/%s' % app), [
-        (T('Controller'), False,
-         URL(
-         'admin', 'default', 'edit/%s/controllers/%s.py' % (app, ctr))),
-        (T('View'), False,
-         URL(
-         'admin', 'default', 'edit/%s/views/%s' % (app, response.view))),
-        (T('Layout'), False,
-         URL(
-         'admin', 'default', 'edit/%s/views/layout.html' % app)),
-        (T('Stylesheet'), False,
-         URL(
-         'admin', 'default', 'edit/%s/static/css/web2py.css' % app)),
-        (T('DB Model'), False,
-         URL(
-         'admin', 'default', 'edit/%s/models/db.py' % app)),
-        (T('Menu Model'), False,
-         URL(
-         'admin', 'default', 'edit/%s/models/menu.py' % app)),
-        (T('Database'), False, URL(app, 'appadmin', 'index')),
-        (T('Errors'), False, URL(
-         'admin', 'default', 'errors/' + app)),
-        (T('About'), False, URL(
-         'admin', 'default', 'about/' + app)),
-        ]),
-            ('web2py.com', False, 'http://www.web2py.com', [
-             (T('Download'), False,
-              'http://www.web2py.com/examples/default/download'),
-             (T('Support'), False,
-              'http://www.web2py.com/examples/default/support'),
-             (T('Demo'), False, 'http://web2py.com/demo_admin'),
-             (T('Quick Examples'), False,
-              'http://web2py.com/examples/default/examples'),
-             (T('FAQ'), False, 'http://web2py.com/AlterEgo'),
-             (T('Videos'), False,
-              'http://www.web2py.com/examples/default/videos/'),
-             (T('Free Applications'),
-              False, 'http://web2py.com/appliances'),
-             (T('Plugins'), False, 'http://web2py.com/plugins'),
-             (T('Layouts'), False, 'http://web2py.com/layouts'),
-             (T('Recipes'), False, 'http://web2pyslices.com/'),
-             (T('Semantic'), False, 'http://web2py.com/semantic'),
-             ]),
-            (T('Documentation'), False, 'http://www.web2py.com/book', [
-             (T('Preface'), False,
-              'http://www.web2py.com/book/default/chapter/00'),
-             (T('Introduction'), False,
-              'http://www.web2py.com/book/default/chapter/01'),
-             (T('Python'), False,
-              'http://www.web2py.com/book/default/chapter/02'),
-             (T('Overview'), False,
-              'http://www.web2py.com/book/default/chapter/03'),
-             (T('The Core'), False,
-              'http://www.web2py.com/book/default/chapter/04'),
-             (T('The Views'), False,
-              'http://www.web2py.com/book/default/chapter/05'),
-             (T('Database'), False,
-              'http://www.web2py.com/book/default/chapter/06'),
-             (T('Forms and Validators'), False,
-              'http://www.web2py.com/book/default/chapter/07'),
-             (T('Email and SMS'), False,
-              'http://www.web2py.com/book/default/chapter/08'),
-             (T('Access Control'), False,
-              'http://www.web2py.com/book/default/chapter/09'),
-             (T('Services'), False,
-              'http://www.web2py.com/book/default/chapter/10'),
-             (T('Ajax Recipes'), False,
-              'http://www.web2py.com/book/default/chapter/11'),
-             (T('Components and Plugins'), False,
-              'http://www.web2py.com/book/default/chapter/12'),
-             (T('Deployment Recipes'), False,
-              'http://www.web2py.com/book/default/chapter/13'),
-             (T('Other Recipes'), False,
-              'http://www.web2py.com/book/default/chapter/14'),
-             (T('Buy this book'), False,
-              'http://stores.lulu.com/web2py'),
-             ]),
-            (T('Community'), False, None, [
-             (T('Groups'), False,
-              'http://www.web2py.com/examples/default/usergroups'),
-                        (T('Twitter'), False, 'http://twitter.com/web2py'),
-                        (T('Live Chat'), False,
-                         'http://webchat.freenode.net/?channels=web2py'),
-                        ]),
-                (T('Plugins'), False, None, [
-                        ('plugin_wiki', False,
-                         'http://web2py.com/examples/default/download'),
-                        (T('Other Plugins'), False,
-                         'http://web2py.com/plugins'),
-                        (T('Layout Plugins'),
-                         False, 'http://web2py.com/layouts'),
-                        ])
-                ]
-         )]
-if DEVELOPMENT_MENU: _()
 
 if "auth" in locals(): auth.wikimenu() 
