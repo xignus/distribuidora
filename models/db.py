@@ -9,7 +9,7 @@
 ## be redirected to HTTPS, uncomment the line below:
 # request.requires_https()
 
-db = DAL('sqlite://storage.sqlite',pool_size=1,check_reserved=['all'])
+db = DAL('sqlite://storage.sqlite',pool_size=1,check_reserved=['all'], migrate=True, fake_migrate=True)
 
 ## by default give a view/generic.extension to all actions from localhost
 ## none otherwise. a pattern can be 'controller/function.extension'
