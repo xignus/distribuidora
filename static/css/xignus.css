@@ -31,16 +31,17 @@ header {
 .menu ul.nav-pills li a{
     color:white;
     background:linear-gradient(#428bca ,#3399ff );
-    -moz-transition:font-size .4s;
-    -webkit-transition:font-size .4s;
+    -moz-transition:font-size .2s;
+    -webkit-transition:font-size .2s;
 }
 
 .menu ul.nav-pills li a:hover{
     color:white;
     background:linear-gradient(#3399ff,#428bca );
     font-size:0px;
-    height:55px;
+    height:65px;
     padding-top:15px;
+    padding-bottom:20px;
 }
 
 .menu ul.nav-pills li a span{
