@@ -4,6 +4,12 @@ db.define_table('contacto',
                 Field('nombre', requires=IS_NOT_EMPTY()),
                 Field('email', requires=IS_EMAIL()),
                 Field('mensaje', 'text'),
+                Field('fecha','datetime',default=request.now, readable=False, writable=False)
+)
+
+db.define_table('leidos',
+                Field('mensaje',db.contacto),
+                Field('usuario', db.auth_user)
 )
 
 db.define_table('empresa',

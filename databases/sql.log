@@ -132,3 +132,13 @@ timestamp: 2014-09-02T16:45:02.390495
 ALTER TABLE slideshow ADD activo CHAR(1);
 success!
 success!
+timestamp: 2014-09-12T12:38:00.612239
+ALTER TABLE contacto ADD fecha TIMESTAMP;
+success!
+timestamp: 2014-09-12T12:38:24.837603
+CREATE TABLE leidos(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    mensaje INTEGER REFERENCES contacto (id) ON DELETE CASCADE,
+    usuario INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!

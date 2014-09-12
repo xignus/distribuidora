@@ -15,5 +15,13 @@ var contact_form = function(){
     $('.contact a').attr('data-target','#MyContact');
 };
 
+var screen_control = function(){
+    if ($(window).width()<480)
+    {
+	$('.nav-pills').addClass('nav-stacked');
+    }
+};
+
 limpiarform();
 contact_form();
+screen_control();
