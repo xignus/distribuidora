@@ -10,7 +10,7 @@
     </button>
     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
             {{for categoria in categorias:}}
-	    {{if categoria.categorias.id==int(request.args(1)):}}
+	    {{if str(categoria.categorias.id)==request.args(1):}}
 	    <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></li>
 	    {{else:}}
 	    <li role="presentation"><a role="menuitem" tabindex="-1" href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></li>
