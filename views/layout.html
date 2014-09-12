@@ -82,12 +82,14 @@
 	      <img src="{{=URL('static','images/logocanale.png')}}" class="logo pull-right no-prod" alt="" />
 	    </div>
 	  </div>
-	  
-	  <div class="collapse navbar-collapse menu pull-right">
-	    {{if response.menu:}}
-	    {{=MENU(response.menu, _class="text-center nav nav-pills")}}
-	    {{pass}}
+	  <div class="navbar-default">
+	    <div class="collapse navbar-collapse menu pull-right">
+	      {{if response.menu:}}
+	      {{=MENU(response.menu, _class="text-center nav nav-pills")}}
+	      {{pass}}
+	    </div>
 	  </div>
+
 	</header> <!-- fin encabezado -->
       </div>
       
