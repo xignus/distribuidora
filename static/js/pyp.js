@@ -10,7 +10,7 @@ var limpiarform = function (){
 };
 
 var contact_form = function(){
-    $('ul li:nth-child(4)').addClass("contact");
+    $('ul.nav li:nth-child(4)').addClass("contact");
     $('.contact a').attr('data-toggle','modal');
     $('.contact a').attr('data-target','#MyContact');
 };
