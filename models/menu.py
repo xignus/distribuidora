@@ -23,10 +23,10 @@ response.google_analytics_id = None
 #########################################################################
 
 if not(session.auth):
-    last_option = (A(SPAN(_class='fa fa-sign-in')+' Entrar', ((request.controller=='default')&(request.function=='user')), URL('default', 'user/login')))
+    last_option = (A(SPAN(_class='fa fa-sign-in')+BR()+' Entrar', ((request.controller=='default')&(request.function=='user')), URL('default', 'user/login')))
     
 else:
-    last_option = (A(SPAN(_class='fa fa-wrench')+' Panel', ((request.controller=='adminweb')&(request.function=='index')), URL('adminweb', 'index')))
+    last_option = (A(SPAN(_class='fa fa-wrench')+BR()+' Panel', ((request.controller=='adminweb')&(request.function=='index')), URL('adminweb', 'index')))
 
 
 #if not(session.auth):
@@ -35,10 +35,10 @@ else:
 #     last_option=(A(SPAN(_class='fa fa-wrench')+" Panel", ((request.controller=='adminweb')&(request.function=='index')), URL('adminweb', 'index'))),
 
 response.menu = [
-    (A(SPAN(_class='fa fa-home')+" Inicio", ((request.controller=='default')&(request.function=='index')), URL('default', 'index'))),
-    (A(SPAN(_class='fa fa-building')+" Empresa", ((request.controller=='default')&(request.function=='empresa')), URL('default', 'empresa'))),
-    (A(SPAN(_class='fa fa-cubes')+" Productos", ((request.controller=='default')&(request.function=='productos')), URL('default', 'productos'))),
-    (A(SPAN(_class='fa fa-envelope')+" Contacto", False, "#myModal", _class="contact")),
+    (A(SPAN(_class='fa fa-home')+BR()+" Inicio", ((request.controller=='default')&(request.function=='index')), URL('default', 'index'),_class='opcion')),
+    (A(SPAN(_class='fa fa-building')+BR()+" Empresa", ((request.controller=='default')&(request.function=='empresa')), URL('default', 'empresa'))),
+    (A(SPAN(_class='fa fa-cubes')+BR()+" Productos", ((request.controller=='default')&(request.function=='productos')), URL('default', 'productos'))),
+    (A(SPAN(_class='fa fa-envelope')+BR()+" Contacto", False, "#myModal", _class="contact")),
     last_option,
 ]
 

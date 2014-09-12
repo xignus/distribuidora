@@ -2,34 +2,26 @@
 
 <div class="box">
   <h2 class="text-center">Productos marca {{=request.args(0)}}</h2>
+  <div class="container">
+      <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+      Seleccione una categoria
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            {{for categoria in categorias:}}
+	    {{if categoria.categorias.id==int(request.args(1)):}}
+	    <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></li>
+	    {{else:}}
+	    <li role="presentation"><a role="menuitem" tabindex="-1" href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></li>
+	    {{pass}}
+	    {{pass}}
+    </ul>
+  </div>
+  <br />
+  </div>  
   <div class="row">
-    <div class="col-xs-2 fix">
-      <div class="submenu">
-	<h4 class="text-center">Categorias</h4>
-	<table class="categorias table">
-	  {{for categoria in categorias:}}
-	  {{if request.args(1):}}
-	  {{if (categoria.categorias.id==int(request.args(1))):}}
-	  <tr>
-	    <td class="active"><a href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></td>
-	  </tr>
-	  
-	  {{else:}}
-	  <tr>
-	    <td><a href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></td>
-	  </tr>
-	  {{pass}}
-	  {{else:}}
-	  <tr>
-	    <td><a href="{{=URL('default','listado',args=(request.args(0), categoria.categorias.id))}}">{{=categoria.categorias.nombre.capitalize()}}</a></td>
-	  </tr>
-	  {{pass}}
-	  {{pass}}
-	  {{pass}}
-	</table>
-      </div>
-    </div>
-    <div class="col-xs-10 fix">
+    <div class="col-xs-12 fix">
       {{for producto in productos:}}
       <div class="col-xs-6 col-md-3 text-center">
 	<div class="panel panel-primary">
