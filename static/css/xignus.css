@@ -18,6 +18,10 @@ header {
     padding:2em;
 }
 
+.menu ul.nav-pills {
+    min-height:65px;
+}
+
 .menu ul.nav-pills li{
     margin:0px 10px 0px 0px;
 #    background:linear-gradient(#428bca ,#3399ff );
