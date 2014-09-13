@@ -1,8 +1,38 @@
 #-*- coding: utf-8 -*-
 @auth.requires_membership('adminweb')
 def index():
-    return dict()
+    mensajes=db((db.contacto.id>0)&(db.leidos.usuario!=session.auth.user.id)).select()
 
+    return dict(mensajes=mensajes)
+
+@auth.requires_membership('adminweb')
+def leermensaje():
+    mensaje=crud.read(db.contacto, request.vars.id)
+    existe=db((db.contacto.id==db.leidos.mensaje)&(db.leidos.usuario==session.auth.user.id)).select()
+    if existe:
+        nuevo="Leido"
+    else:
+        nuevo="No leido"
+        db.leidos.insert(mensaje=request.vars.id, usuario=session.auth.user.id)
+    return dict(mensaje=mensaje, nuevo=nuevo)
+
+@auth.requires_membership('adminweb')
+def mensajes():
+    mensajes=db(db.contacto.id>0).select()
+
+    leidos=db(db.leidos.id>0).select()
+    return dict(mensajes=mensajes, leidos=leidos)
+
+@auth.requires_membership('adminweb')
+def borrarmensaje():
+    if request.vars.id:
+        crud.delete(db.contacto, request.vars.id)
+        redirect(URL('adminweb','mensajes'))
+    else:
+        redirect(URL('adminweb','mensajes'))
+        session.flash('Ha ocurrido un error, vuelva a intentarlo')
+    return dict()
+    
 @auth.requires_membership('adminweb')
 def slideshow():
     db.slideshow.id.readable=False

@@ -22,3 +22,7 @@
 .boton {
     margin-bottom:15px;
 }
+
+.well {
+    overflow:hidden;
+}

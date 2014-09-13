@@ -3,6 +3,7 @@ var limpiarform = function (){
     $('#contacto_email__label').hide();
     $('#contacto_mensaje__label').hide();
     $('input[type=text]').addClass('form-control');
+    $('input[type=password]').addClass('form-control');
     $('textarea').addClass('form-control');
     $('input[type=submit]').addClass('btn-primary');
     $('#contacto_nombre').attr('placeholder','Nombre...')

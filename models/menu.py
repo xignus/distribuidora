@@ -42,4 +42,7 @@ response.menu = [
     last_option,
 ]
 
+response.webmenu = [
+    
+]
 if "auth" in locals(): auth.wikimenu() 
