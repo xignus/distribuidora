@@ -23,8 +23,7 @@ def mensajes():
 @auth.requires_membership('adminweb')
 def borrarmensaje():
     if request.vars.id:
-        crud.delete(db.contacto, request.vars.id)
-        redirect(URL('adminweb','mensajes'))
+        crud.delete(db.contacto, request.vars.id, next=URL('adminweb','mensajes'))
     else:
         redirect(URL('adminweb','mensajes'))
         session.flash('Ha ocurrido un error, vuelva a intentarlo')
