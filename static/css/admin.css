@@ -26,3 +26,7 @@
 .well {
     overflow:hidden;
 }
+
+.noleido {
+    min-width:150px;
+}

@@ -11,6 +11,10 @@ var form_pretty = function(){
     $('.ui-button-text-icon-primary').addClass('btn btn-primary')
 };
 
+var datatables=function(){
+    $('#tabla').dataTable();
+};
+
 $(document).ready(function(){
     
     $('.new_form').hide();

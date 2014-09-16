@@ -2,7 +2,7 @@
 
 <h2>Mensajes recibidos por la web</h2>
 
-<table class="table">
+<table class="table" id="tabla">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -18,9 +18,9 @@
       <td>{{=mensaje.email}}</td>
       <td>{{=mensaje.fecha}}</td>
       {{if not(db((db.leidos.mensaje==mensaje.id)&(db.leidos.usuario==session.auth.user.id)).select()):}}
-       <td><a href="{{=URL('adminweb','leermensaje', vars=dict(id=mensaje.id))}}" class="btn btn-primary btn-large"><span class="badge pull-right">Nuevo</span> Ver mensaje</a></td>
+       <td><a href="{{=URL('adminweb','leermensaje', vars=dict(id=mensaje.id))}}" class="noleido btn btn-primary btn-large"><span class="badge pull-right">Nuevo</span> Leer</a></td>
       {{else:}}
-       <td><a href="{{=URL('adminweb','leermensaje', vars=dict(id=mensaje.id))}}" class="btn btn-primary"><span class="fa fa-eye"></span> Ver mensaje</a></td>
+       <td><a href="{{=URL('adminweb','leermensaje', vars=dict(id=mensaje.id))}}" class="btn btn-primary"><span class="fa fa-eye"></span> Leer</a></td>
       {{pass}}
     </tr>
     {{pass}}

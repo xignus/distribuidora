@@ -8,17 +8,14 @@ def index():
 @auth.requires_membership('adminweb')
 def leermensaje():
     mensaje=crud.read(db.contacto, request.vars.id)
-    existe=db((db.contacto.id==db.leidos.mensaje)&(db.leidos.usuario==session.auth.user.id)).select()
-    if existe:
-        nuevo="Leido"
-    else:
-        nuevo="No leido"
+    existe=db((db.leidos.mensaje==request.vars.id)&(db.leidos.usuario==session.auth.user.id)).select()
+    if not(len(existe)>0):
         db.leidos.insert(mensaje=request.vars.id, usuario=session.auth.user.id)
-    return dict(mensaje=mensaje, nuevo=nuevo)
+    return dict(mensaje=mensaje)
 
 @auth.requires_membership('adminweb')
 def mensajes():
-    mensajes=db(db.contacto.id>0).select()
+    mensajes=db(db.contacto.id>0).select(orderby=~db.contacto.fecha)
 
     leidos=db(db.leidos.id>0).select()
     return dict(mensajes=mensajes, leidos=leidos)
